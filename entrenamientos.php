@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['accion']) && $_POST['
         $ext = pathinfo($file_name, PATHINFO_EXTENSION);
         $formatos_permitidos = ['jpg', 'jpeg', 'png', 'gif', 'webp'];
 
-        if (in_box(strtolower($ext), $formatos_permitidos)) {
+        if (in_array(strtolower($ext), $formatos_permitidos)) {
             // Renombramos el archivo de forma única: ej. ejer_171738291.jpg
             $nuevo_nombre_img = "ejer_" . time() . "." . $ext;
             $ruta_destino = "img/ejercicios/" . $nuevo_nombre_img;
