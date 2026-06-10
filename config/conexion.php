@@ -16,7 +16,8 @@ $options = [
 ];
 
 // Cadena de conexión (Data Source Name)
-$dsn = "mysql:host=$host;dbname=$db;charset=$charset";
+// Cadena de conexión (Data Source Name) modificada para servidores en la nube
+$dsn = "mysql:host=$host;dbname=$db;charset=$charset;port=3306";
 
 try {
     // Creamos la instancia de la conexión
